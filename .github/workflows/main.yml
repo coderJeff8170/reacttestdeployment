@@ -16,12 +16,16 @@ jobs:
         uses: actions/setup-node@v2
         with:
           node-version: '21'
+          cache: 'pnpm'
+
+      - name: Install pnpm
+        run: npm install -g pnpm
 
       - name: Install dependencies
-        run: npm install
+        run: pnpm install
 
       - name: Build with Vite
-        run: npx tsc && vite build
+        run: pnpm run build
 
       - name: Configure AWS Credentials
         uses: aws-actions/configure-aws-credentials@v1
