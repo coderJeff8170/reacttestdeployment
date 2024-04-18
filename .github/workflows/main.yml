@@ -23,12 +23,6 @@ jobs:
           node-version: '20'
           cache: 'pnpm'
 
-      # - name: Install -g pnpm
-      #   run: npm install pnpm
-
-      # - name: Add pnpm to PATH
-      #   run: echo "$(npm prefix -g)/bin" >> $GITHUB_PATH
-
       - name: Install dependencies
         run: pnpm install
 
