@@ -19,10 +19,10 @@ jobs:
           cache: 'pnpm'
 
       - name: Install pnpm
-        run: npm install -g pnpm
+        run: npm install pnpm
 
-      - name: Add pnpm to PATH
-        run: echo "$(npm prefix -g)/bin" >> $GITHUB_PATH
+      # - name: Add pnpm to PATH
+      #   run: echo "$(npm prefix -g)/bin" >> $GITHUB_PATH
 
       - name: Install dependencies
         run: pnpm install
