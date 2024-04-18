@@ -15,10 +15,10 @@ jobs:
       - name: Set up Node.js
         uses: actions/setup-node@v2
         with:
-          node-version: '21'
+          node-version: '20'
           cache: 'pnpm'
 
-      - name: Install pnpm
+      - name: Install -g pnpm
         run: npm install pnpm
 
       # - name: Add pnpm to PATH
